@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rio de Janeiro — October 2026 — Antonio Dixon</title>
+  <meta name="description" content="5 nights in Rio. JW Marriott. Sunday in Ipanema. Antonio Dixon hosting. 12 spots only.">
+  <meta property="og:title" content="Rio de Janeiro — October 2026 — Antonio Dixon hosting">
+  <meta property="og:description" content="12 people. 5 nights. JW Marriott. $750 holds your spot. Deadline July 15.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?w=1200&q=80">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black:      #090909;
+      --dark:       #111111;
+      --card:       #181818;
+      --border:     rgba(255,255,255,0.07);
+      --gold:       #c9a96e;
+      --gold-light: #e2c48a;
+      --white:      #f2ebe0;
+      --muted:      #7a7268;
+      --dim:        #b0a898;
+      --red:        #c0392b;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: 'Inter', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      font-size: 16px;
+      line-height: 1.65;
+    }
+
+    /* ─── HERO ─── */
+    .hero {
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 3rem 2rem 3.5rem;
+      background:
+        linear-gradient(to bottom,
+          rgba(9,9,9,0.15) 0%,
+          rgba(9,9,9,0.55) 40%,
+          rgba(9,9,9,0.97) 85%),
+        url('https://images.unsplash.com/photo-1483729558449-99ef09a8c325?w=1400&q=85')
+          center / cover no-repeat;
+      position: relative;
+    }
+
+    .spots-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      border: 1px solid rgba(201,169,110,0.35);
+      color: var(--gold);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 0.35rem 0.85rem;
+      margin-bottom: 1.4rem;
+      width: fit-content;
+    }
+
+    .spots-dot {
+      width: 6px;
+      height: 6px;
+      background: var(--gold);
+      border-radius: 50%;
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+
+    .hero-eyebrow {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(3rem, 10vw, 6.5rem);
+      font-weight: 900;
+      line-height: 0.95;
+      letter-spacing: -0.025em;
+      margin-bottom: 1.75rem;
+    }
+
+    .hero-sub {
+      font-size: 1.05rem;
+      color: var(--dim);
+      margin-bottom: 2.25rem;
+      max-width: 420px;
+      line-height: 1.55;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--black);
+      padding: 1.05rem 2.25rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.92rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: background 0.18s ease, transform 0.1s ease;
+      -webkit-appearance: none;
+    }
+
+    .btn-primary:hover  { background: var(--gold-light); transform: translateY(-1px); }
+    .btn-primary:active { transform: translateY(0); }
+
+    /* ─── LAYOUT ─── */
+    .wrap { max-width: 660px; margin: 0 auto; padding: 0 1.5rem; }
+
+    section { padding: 4.5rem 0; }
+
+    .section-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+
+    .rule {
+      width: 36px;
+      height: 2px;
+      background: var(--gold);
+      margin-bottom: 2rem;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.9rem, 5vw, 3.2rem);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.5rem;
+    }
+
+    .body-text { color: var(--dim); margin-bottom: 1.25rem; }
+    .body-text:last-child { margin-bottom: 0; }
+
+    /* ─── VIBE QUOTE ─── */
+    .pull-quote {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: clamp(1.15rem, 3.2vw, 1.5rem);
+      line-height: 1.55;
+      color: var(--white);
+      border-left: 3px solid var(--gold);
+      padding-left: 1.5rem;
+      margin: 2.25rem 0;
+    }
+
+    /* ─── INCLUDED ─── */
+    .included-list { margin-top: 2rem; }
+
+    .inc-item {
+      display: flex;
+      gap: 1.1rem;
+      padding: 1.25rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .inc-item:first-child { border-top: 1px solid var(--border); }
+
+    .inc-mark {
+      color: var(--gold);
+      font-size: 0.85rem;
+      flex-shrink: 0;
+      margin-top: 0.2rem;
+    }
+
+    .inc-body strong { display: block; color: var(--white); margin-bottom: 0.2rem; font-size: 0.95rem; }
+    .inc-body span   { color: var(--muted); font-size: 0.87rem; line-height: 1.5; }
+
+    .not-included-box {
+      margin-top: 1.75rem;
+      border: 1px solid var(--border);
+      padding: 1.25rem 1.5rem;
+    }
+
+    .not-included-box p {
+      color: var(--muted);
+      font-size: 0.87rem;
+      margin: 0;
+    }
+
+    .not-included-box strong { color: var(--dim); }
+
+    /* ─── PRICING ─── */
+    .price-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 440px) {
+      .price-grid { grid-template-columns: 1fr; }
+    }
+
+    .price-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      padding: 1.75rem 1.5rem;
+      position: relative;
+    }
+
+    .price-card.featured { border-color: var(--gold); }
+
+    .featured-badge {
+      position: absolute;
+      top: 0; right: 0;
+      background: var(--gold);
+      color: var(--black);
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.22rem 0.6rem;
+    }
+
+    .price-type {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.9rem;
+    }
+
+    .price-amount {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.1rem;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1;
+      margin-bottom: 0.4rem;
+    }
+
+    .price-note { font-size: 0.8rem; color: var(--muted); }
+
+    /* ─── PAYMENT TERMS ─── */
+    .terms-table { margin-top: 2rem; }
+
+    .term-row {
+      display: grid;
+      grid-template-columns: 90px 1fr;
+      gap: 1.25rem;
+      padding: 1.25rem 0;
+      border-bottom: 1px solid var(--border);
+      align-items: start;
+    }
+
+    .term-row:first-child { border-top: 1px solid var(--border); }
+
+    .term-date {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold);
+      padding-top: 0.15rem;
+    }
+
+    .term-content strong { display: block; color: var(--white); font-size: 0.93rem; margin-bottom: 0.2rem; }
+    .term-content span   { color: var(--muted); font-size: 0.85rem; }
+
+    .transfer-note {
+      margin-top: 1.75rem;
+      border-left: 3px solid var(--gold);
+      padding: 1rem 1.25rem;
+      background: rgba(201,169,110,0.05);
+      font-size: 0.87rem;
+      color: var(--dim);
+      line-height: 1.6;
+    }
+
+    .transfer-note strong { color: var(--white); }
+
+    /* ─── BIG CTA ─── */
+    .cta-band {
+      background: var(--dark);
+      padding: 5rem 1.5rem;
+      text-align: center;
+    }
+
+    .cta-band-inner { max-width: 480px; margin: 0 auto; }
+
+    .deadline-chip {
+      display: inline-block;
+      background: rgba(192,57,43,0.14);
+      border: 1px solid rgba(192,57,43,0.38);
+      color: #d96050;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.75rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .cta-band h2 { font-size: clamp(1.7rem, 5vw, 2.6rem); margin-bottom: 0.6rem; }
+    .cta-band p  { color: var(--muted); font-size: 0.9rem; margin-bottom: 2rem; }
+
+    .btn-block {
+      display: block;
+      width: 100%;
+      max-width: 360px;
+      margin: 0 auto 1.25rem;
+      background: var(--gold);
+      color: var(--black);
+      padding: 1.15rem 2rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      text-decoration: none;
+      text-align: center;
+      border: none;
+      cursor: pointer;
+      transition: background 0.18s, transform 0.1s;
+    }
+
+    .btn-block:hover  { background: var(--gold-light); transform: translateY(-1px); }
+    .btn-block:active { transform: translateY(0); }
+
+    .secondary-action {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .secondary-action a {
+      color: var(--dim);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      cursor: pointer;
+    }
+
+    /* ─── WAITLIST ─── */
+    .waitlist-band {
+      background: #0d0d0d;
+      padding: 5rem 1.5rem;
+    }
+
+    .waitlist-inner { max-width: 480px; margin: 0 auto; }
+
+    .waitlist-inner h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.4rem, 4vw, 1.9rem);
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      line-height: 1.15;
+    }
+
+    .waitlist-inner p {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-bottom: 1.75rem;
+      line-height: 1.6;
+    }
+
+    .wl-form { display: flex; flex-direction: column; gap: 0.65rem; }
+
+    .wl-form input,
+    .wl-form select {
+      background: var(--card);
+      border: 1px solid var(--border);
+      color: var(--white);
+      padding: 0.9rem 1rem;
+      font-size: 0.9rem;
+      font-family: 'Inter', sans-serif;
+      width: 100%;
+      outline: none;
+      -webkit-appearance: none;
+      border-radius: 0;
+      transition: border-color 0.15s;
+    }
+
+    .wl-form input::placeholder { color: var(--muted); }
+
+    .wl-form input:focus,
+    .wl-form select:focus { border-color: var(--gold); }
+
+    .wl-form select { color: var(--dim); cursor: pointer; }
+    .wl-form select option { background: #181818; color: var(--white); }
+
+    .wl-submit {
+      background: transparent;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      padding: 0.9rem 1rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      cursor: pointer;
+      transition: background 0.18s, color 0.18s;
+    }
+
+    .wl-submit:hover {
+      background: var(--gold);
+      color: var(--black);
+    }
+
+    .wl-success {
+      display: none;
+      text-align: center;
+      padding: 2.5rem 1rem;
+      color: var(--gold);
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+
+    /* ─── FOOTER ─── */
+    footer {
+      padding: 2rem 1.5rem;
+      text-align: center;
+      font-size: 0.78rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+    }
+
+    /* ─── UTILITIES ─── */
+    @media (max-width: 600px) {
+      .hero { padding: 2rem 1.5rem 2.75rem; }
+      section { padding: 3.5rem 0; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══ HERO ═══ -->
+<div class="hero">
+  <div class="spots-pill">
+    <div class="spots-dot"></div>
+    12 Spots Only
+  </div>
+  <div class="hero-eyebrow">Antonio Dixon &nbsp;·&nbsp; Rio de Janeiro &nbsp;·&nbsp; October 2026</div>
+  <h1>Rio de<br>Janeiro.<br>October.<br>I'm hosting.</h1>
+  <p class="hero-sub">5 nights. JW Marriott. Sunday in Ipanema. 12 people only. $750 holds your spot.</p>
+  <a href="STRIPE_LINK_PLACEHOLDER" class="btn-primary">Reserve Your Spot — $750 Deposit</a>
+</div>
+
+<!-- ═══ EXPERIENCE ═══ -->
+<div class="wrap">
+  <section>
+    <div class="section-label">The Experience</div>
+    <div class="rule"></div>
+    <h2>Sunday in Ipanema changes you.</h2>
+    <blockquote class="pull-quote">
+      "They close the road. The whole city walks into the street. No cars — just music, caipirinhas, and two million people who remembered what life is for."
+    </blockquote>
+    <p class="body-text">That's why this trip exists. Antonio went to Rio, couldn't stop talking about Sunday in Ipanema, and instead of answering the same question fifty times — he's taking a group.</p>
+    <p class="body-text">Five days in Rio de Janeiro. Twelve people who move — or are building the thing that will. Antonio as your host. The JW Marriott as your base. Sunday on Ipanema as the centerpiece.</p>
+    <p class="body-text">This isn't a tour. There's no itinerary you'll follow in a group of thirty. It's twelve people with real access, moving through one of the most alive cities on earth, with someone who's already mapped it.</p>
+  </section>
+</div>
+
+<!-- ═══ INCLUDED ═══ -->
+<div class="wrap">
+  <section style="padding-top: 0;">
+    <div class="section-label">What's Included</div>
+    <div class="rule"></div>
+    <h2>Everything that matters.</h2>
+
+    <div class="included-list">
+      <div class="inc-item">
+        <span class="inc-mark">✦</span>
+        <div class="inc-body">
+          <strong>5 Nights — JW Marriott Rio de Janeiro</strong>
+          <span>One of the best addresses in the city. Lounge access for the whole group.</span>
+        </div>
+      </div>
+      <div class="inc-item">
+        <span class="inc-mark">✦</span>
+        <div class="inc-body">
+          <strong>Welcome Dinner — Night One</strong>
+          <span>Hosted by Antonio. The trip starts here.</span>
+        </div>
+      </div>
+      <div class="inc-item">
+        <span class="inc-mark">✦</span>
+        <div class="inc-body">
+          <strong>Sunday in Ipanema</strong>
+          <span>The road closure. The real Rio. This is the centerpiece — the reason this trip exists.</span>
+        </div>
+      </div>
+      <div class="inc-item">
+        <span class="inc-mark">✦</span>
+        <div class="inc-body">
+          <strong>Christ the Redeemer + Sugarloaf Mountain</strong>
+          <span>Private guided experience. No crowd queues, no tourist group chaos.</span>
+        </div>
+      </div>
+      <div class="inc-item">
+        <span class="inc-mark">✦</span>
+        <div class="inc-body">
+          <strong>One Night Out — Antonio Hosts</strong>
+          <span>Curated. Not a tourist bar crawl.</span>
+        </div>
+      </div>
+      <div class="inc-item">
+        <span class="inc-mark">✦</span>
+        <div class="inc-body">
+          <strong>Airport Transfers</strong>
+          <span>Group arrival and departure. No scrambling for cabs.</span>
+        </div>
+      </div>
+      <div class="inc-item">
+        <span class="inc-mark">✦</span>
+        <div class="inc-body">
+          <strong>JW Marriott Lounge Access</strong>
+          <span>The kind of access that changes how a hotel feels.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="not-included-box">
+      <p><strong>Not included:</strong> Flights (book your own — no flight liability), personal spend, meals outside of inclusions. You own your flights. Everything else, we've got.</p>
+    </div>
+  </section>
+</div>
+
+<!-- ═══ PRICING ═══ -->
+<div class="wrap">
+  <section style="padding-top: 0;">
+    <div class="section-label">Dates &amp; Pricing</div>
+    <div class="rule"></div>
+    <h2>October 22–27, 2026.</h2>
+    <p class="body-text">Wednesday arrival through Monday departure. Five full nights in Rio de Janeiro.</p>
+
+    <div class="price-grid">
+      <div class="price-card">
+        <div class="price-type">Double Occupancy</div>
+        <div class="price-amount">$2,800</div>
+        <div class="price-note">per person · shared room</div>
+      </div>
+      <div class="price-card featured">
+        <div class="featured-badge">Most Popular</div>
+        <div class="price-type">Single Occupancy</div>
+        <div class="price-amount">$3,900</div>
+        <div class="price-note">per person · private king bed</div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ═══ PAYMENT TERMS ═══ -->
+<div class="wrap">
+  <section style="padding-top: 0;">
+    <div class="section-label">Payment Terms</div>
+    <div class="rule"></div>
+    <h2>Straightforward.</h2>
+
+    <div class="terms-table">
+      <div class="term-row">
+        <div class="term-date">July 15</div>
+        <div class="term-content">
+          <strong>$750 Deposit Due</strong>
+          <span>Non-refundable. Locks your spot through September 1.</span>
+        </div>
+      </div>
+      <div class="term-row">
+        <div class="term-date">Sept 1</div>
+        <div class="term-content">
+          <strong>Full Balance Due</strong>
+          <span>Non-refundable after this date. Trip is locked.</span>
+        </div>
+      </div>
+      <div class="term-row">
+        <div class="term-date">Oct 22</div>
+        <div class="term-content">
+          <strong>Rio.</strong>
+          <span>JW Marriott check-in. Welcome dinner that night.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="transfer-note">
+      <strong>Can't make it?</strong> Your deposit is transferable to another guest — send a friend in your place, same terms apply. No cancellations, but your spot doesn't disappear if life gets in the way.
+    </div>
+  </section>
+</div>
+
+<!-- ═══ MAIN CTA ═══ -->
+<div class="cta-band" id="reserve">
+  <div class="cta-band-inner">
+    <div class="deadline-chip">Deposit Deadline: July 15, 2026</div>
+    <h2>12 spots. 0 exceptions.</h2>
+    <p>When it's full, it's full. No waiting list for October.</p>
+    <a href="STRIPE_LINK_PLACEHOLDER" class="btn-block">Reserve Your Spot — $750 Deposit</a>
+    <p class="secondary-action">
+      Not ready? <a href="#waitlist">Join the waitlist</a> for Cape Town or Bangkok.
+    </p>
+  </div>
+</div>
+
+<!-- ═══ WAITLIST ═══ -->
+<div class="waitlist-band" id="waitlist">
+  <div class="waitlist-inner">
+    <h3>Not ready for Rio?</h3>
+    <p>Cape Town (September 2026) and Bangkok (TBD) are next. Get on the list and Antonio will reach out personally when spots open.</p>
+
+    <form class="wl-form" id="wlForm">
+      <input type="hidden" name="form-name" value="waitlist">
+      <input type="text"   name="name"        placeholder="Your name" required>
+      <input type="email"  name="email"        placeholder="Email address" required>
+      <input type="text"   name="instagram"    placeholder="Instagram handle (optional)">
+      <select name="destination" required>
+        <option value="" disabled selected>Destination interest</option>
+        <option value="rio">Rio de Janeiro — October 2026</option>
+        <option value="cape-town">Cape Town — September 2026</option>
+        <option value="bangkok">Bangkok — TBD</option>
+        <option value="all">All of the above</option>
+      </select>
+      <button type="submit" class="wl-submit">Join the Waitlist</button>
+    </form>
+
+    <div class="wl-success" id="wlSuccess">
+      ✦ You're on the list.<br>Antonio will be in touch personally when the next trip opens.
+    </div>
+  </div>
+</div>
+
+<footer>
+  Trip operated by SolarFi &nbsp;·&nbsp; Questions? DM <strong>@antoniodixon</strong> on Instagram
+</footer>
+
+<script>
+  const form = document.getElementById('wlForm');
+  const success = document.getElementById('wlSuccess');
+
+  if (form) {
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const btn = form.querySelector('.wl-submit');
+      btn.textContent = 'Joining...';
+      btn.disabled = true;
+
+      try {
+        const resp = await fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: new URLSearchParams(new FormData(form)).toString()
+        });
+        form.style.display = 'none';
+        success.style.display = 'block';
+      } catch (err) {
+        form.style.display = 'none';
+        success.style.display = 'block';
+      }
+    });
+  }
+
+  // Smooth scroll for all internal anchors
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+    });
+  });
+</script>
+</body>
+</html>
