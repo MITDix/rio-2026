@@ -3,11 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rio de Janeiro — October 2026 — Antonio Dixon</title>
-  <meta name="description" content="5 nights in Rio. JW Marriott. Sunday in Ipanema. Antonio Dixon hosting. 12 spots only.">
+  <title>Rio de Janeiro — October 2026 — Hosted by Antonio Dixon</title>
+  <meta name="description" content="5 nights in Rio. JW Marriott. Sunday in Ipanema. Antonio Dixon hosting. 12 spots only. $750 deposit by July 15.">
   <meta property="og:title" content="Rio de Janeiro — October 2026 — Antonio Dixon hosting">
   <meta property="og:description" content="12 people. 5 nights. JW Marriott. $750 holds your spot. Deadline July 15.">
   <meta property="og:image" content="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?w=1200&q=80">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Rio de Janeiro — October 2026 — Antonio Dixon hosting">
+  <meta name="twitter:description" content="12 spots. JW Marriott. Sunday in Ipanema. $750 deposit deadline July 15.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -71,17 +75,13 @@
     }
 
     .spots-dot {
-      width: 6px;
-      height: 6px;
+      width: 6px; height: 6px;
       background: var(--gold);
       border-radius: 50%;
       animation: pulse 2s ease-in-out infinite;
     }
 
-    @keyframes pulse {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.3; }
-    }
+    @keyframes pulse { 0%,100%{opacity:1}50%{opacity:.3} }
 
     .hero-eyebrow {
       font-size: 0.7rem;
@@ -109,6 +109,53 @@
       line-height: 1.55;
     }
 
+    /* ─── COUNTDOWN ─── */
+    .countdown-strip {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+      margin-bottom: 1.75rem;
+      flex-wrap: wrap;
+    }
+
+    .countdown-unit {
+      text-align: center;
+      min-width: 50px;
+    }
+
+    .countdown-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--gold);
+      line-height: 1;
+      display: block;
+    }
+
+    .countdown-label {
+      font-size: 0.56rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: 0.2rem;
+    }
+
+    .countdown-sep {
+      color: var(--gold);
+      font-size: 1.5rem;
+      opacity: 0.4;
+      align-self: flex-start;
+      margin-top: 0.25rem;
+    }
+
+    .countdown-context {
+      font-size: 0.72rem;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    /* ─── BUTTONS ─── */
     .btn-primary {
       display: inline-block;
       background: var(--gold);
@@ -142,12 +189,7 @@
       margin-bottom: 1rem;
     }
 
-    .rule {
-      width: 36px;
-      height: 2px;
-      background: var(--gold);
-      margin-bottom: 2rem;
-    }
+    .rule { width: 36px; height: 2px; background: var(--gold); margin-bottom: 2rem; }
 
     h2 {
       font-family: 'Playfair Display', serif;
@@ -185,12 +227,7 @@
 
     .inc-item:first-child { border-top: 1px solid var(--border); }
 
-    .inc-mark {
-      color: var(--gold);
-      font-size: 0.85rem;
-      flex-shrink: 0;
-      margin-top: 0.2rem;
-    }
+    .inc-mark { color: var(--gold); font-size: 0.85rem; flex-shrink: 0; margin-top: 0.2rem; }
 
     .inc-body strong { display: block; color: var(--white); margin-bottom: 0.2rem; font-size: 0.95rem; }
     .inc-body span   { color: var(--muted); font-size: 0.87rem; line-height: 1.5; }
@@ -201,13 +238,69 @@
       padding: 1.25rem 1.5rem;
     }
 
-    .not-included-box p {
-      color: var(--muted);
-      font-size: 0.87rem;
-      margin: 0;
+    .not-included-box p { color: var(--muted); font-size: 0.87rem; margin: 0; }
+    .not-included-box strong { color: var(--dim); }
+
+    /* ─── HOST ─── */
+    .host-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      padding: 2rem;
+      margin-top: 2rem;
     }
 
-    .not-included-box strong { color: var(--dim); }
+    .host-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+    }
+
+    .host-credentials {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .cred-chip {
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold);
+      border: 1px solid rgba(201,169,110,0.3);
+      padding: 0.2rem 0.6rem;
+    }
+
+    .host-bio { color: var(--dim); font-size: 0.92rem; line-height: 1.7; }
+
+    /* ─── ITINERARY ─── */
+    .day-list { margin-top: 1.75rem; }
+
+    .day-item {
+      display: grid;
+      grid-template-columns: 70px 1fr;
+      gap: 1.25rem;
+      padding: 1.25rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .day-item:first-child { border-top: 1px solid var(--border); }
+
+    .day-label {
+      font-size: 0.64rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      padding-top: 0.15rem;
+    }
+
+    .day-date { font-size: 0.7rem; color: var(--muted); margin-top: 0.2rem; }
+
+    .day-content strong { display: block; color: var(--white); font-size: 0.95rem; margin-bottom: 0.25rem; }
+    .day-content span   { color: var(--muted); font-size: 0.87rem; line-height: 1.5; }
 
     /* ─── PRICING ─── */
     .price-grid {
@@ -217,9 +310,7 @@
       margin-top: 2rem;
     }
 
-    @media (max-width: 440px) {
-      .price-grid { grid-template-columns: 1fr; }
-    }
+    @media (max-width: 440px) { .price-grid { grid-template-columns: 1fr; } }
 
     .price-card {
       background: var(--card);
@@ -262,6 +353,35 @@
 
     .price-note { font-size: 0.8rem; color: var(--muted); }
 
+    .spots-counter {
+      margin-top: 1.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .spots-bar-wrap {
+      flex: 1;
+      background: rgba(255,255,255,0.06);
+      height: 4px;
+      border-radius: 2px;
+    }
+
+    .spots-bar-fill {
+      height: 4px;
+      background: var(--gold);
+      border-radius: 2px;
+      width: 16.7%; /* 2 of 12 filled */
+      transition: width 0.4s;
+    }
+
+    .spots-text {
+      font-size: 0.72rem;
+      color: var(--gold);
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
     /* ─── PAYMENT TERMS ─── */
     .terms-table { margin-top: 2rem; }
 
@@ -299,6 +419,45 @@
     }
 
     .transfer-note strong { color: var(--white); }
+
+    /* ─── FAQ ─── */
+    .faq-list { margin-top: 2rem; }
+
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+      padding: 1.5rem 0;
+    }
+
+    .faq-item:first-child { border-top: 1px solid var(--border); }
+
+    .faq-q {
+      font-size: 0.97rem;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 0.65rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .faq-toggle {
+      color: var(--gold);
+      font-size: 1.1rem;
+      flex-shrink: 0;
+      transition: transform 0.2s;
+    }
+
+    .faq-a {
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.65;
+      display: none;
+    }
+
+    .faq-item.open .faq-a     { display: block; }
+    .faq-item.open .faq-toggle { transform: rotate(45deg); }
 
     /* ─── BIG CTA ─── */
     .cta-band {
@@ -347,23 +506,88 @@
     .btn-block:hover  { background: var(--gold-light); transform: translateY(-1px); }
     .btn-block:active { transform: translateY(0); }
 
-    .secondary-action {
-      font-size: 0.85rem;
-      color: var(--muted);
+    .secondary-action { font-size: 0.85rem; color: var(--muted); }
+    .secondary-action a { color: var(--dim); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+
+    /* ─── SOCIAL BAND ─── */
+    .social-band {
+      background: #0c0c0c;
+      padding: 3.5rem 1.5rem;
+      text-align: center;
+      border-top: 1px solid var(--border);
     }
 
-    .secondary-action a {
-      color: var(--dim);
-      text-decoration: underline;
-      text-underline-offset: 3px;
-      cursor: pointer;
+    .social-band p { color: var(--muted); font-size: 0.9rem; margin-bottom: 1.25rem; }
+
+    .ig-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      color: var(--gold);
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 600;
+      border: 1px solid rgba(201,169,110,0.3);
+      padding: 0.65rem 1.25rem;
+      transition: background 0.18s, color 0.18s;
     }
+
+    .ig-link:hover { background: rgba(201,169,110,0.08); }
+
+    /* ─── FUTURE TRIPS ─── */
+    .trips-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 500px) { .trips-grid { grid-template-columns: 1fr; } }
+
+    .trip-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      padding: 1.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .trip-card.coming-soon { opacity: 0.65; }
+
+    .trip-tag {
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+    }
+
+    .trip-city {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+
+    .trip-date { font-size: 0.8rem; color: var(--gold); }
+
+    .trip-status {
+      display: inline-block;
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.18rem 0.5rem;
+      margin-top: 0.75rem;
+    }
+
+    .status-open   { background: rgba(201,169,110,0.12); color: var(--gold); border: 1px solid rgba(201,169,110,0.3); }
+    .status-soon   { background: rgba(100,100,100,0.12); color: var(--muted); border: 1px solid rgba(100,100,100,0.3); }
+    .status-notify { background: rgba(100,100,100,0.08); color: #5a5a5a; border: 1px solid rgba(100,100,100,0.2); }
 
     /* ─── WAITLIST ─── */
-    .waitlist-band {
-      background: #0d0d0d;
-      padding: 5rem 1.5rem;
-    }
+    .waitlist-band { background: #0d0d0d; padding: 5rem 1.5rem; }
 
     .waitlist-inner { max-width: 480px; margin: 0 auto; }
 
@@ -375,12 +599,7 @@
       line-height: 1.15;
     }
 
-    .waitlist-inner p {
-      color: var(--muted);
-      font-size: 0.9rem;
-      margin-bottom: 1.75rem;
-      line-height: 1.6;
-    }
+    .waitlist-inner > p { color: var(--muted); font-size: 0.9rem; margin-bottom: 1.75rem; line-height: 1.6; }
 
     .wl-form { display: flex; flex-direction: column; gap: 0.65rem; }
 
@@ -400,10 +619,8 @@
     }
 
     .wl-form input::placeholder { color: var(--muted); }
-
     .wl-form input:focus,
     .wl-form select:focus { border-color: var(--gold); }
-
     .wl-form select { color: var(--dim); cursor: pointer; }
     .wl-form select option { background: #181818; color: var(--white); }
 
@@ -420,10 +637,7 @@
       transition: background 0.18s, color 0.18s;
     }
 
-    .wl-submit:hover {
-      background: var(--gold);
-      color: var(--black);
-    }
+    .wl-submit:hover { background: var(--gold); color: var(--black); }
 
     .wl-success {
       display: none;
@@ -461,6 +675,16 @@
   <div class="hero-eyebrow">Antonio Dixon &nbsp;·&nbsp; Rio de Janeiro &nbsp;·&nbsp; October 2026</div>
   <h1>Rio de<br>Janeiro.<br>October.<br>I'm hosting.</h1>
   <p class="hero-sub">5 nights. JW Marriott. Sunday in Ipanema. 12 people only. $750 holds your spot.</p>
+
+  <div class="countdown-strip" id="countdown">
+    <div class="countdown-unit"><span class="countdown-num" id="cd-days">--</span><div class="countdown-label">Days</div></div>
+    <div class="countdown-sep">:</div>
+    <div class="countdown-unit"><span class="countdown-num" id="cd-hours">--</span><div class="countdown-label">Hours</div></div>
+    <div class="countdown-sep">:</div>
+    <div class="countdown-unit"><span class="countdown-num" id="cd-mins">--</span><div class="countdown-label">Min</div></div>
+    <div style="margin-left:0.5rem"><div class="countdown-context">until deposit<br>deadline</div></div>
+  </div>
+
   <a href="STRIPE_LINK_PLACEHOLDER" class="btn-primary">Reserve Your Spot — $750 Deposit</a>
 </div>
 
@@ -476,6 +700,99 @@
     <p class="body-text">That's why this trip exists. Antonio went to Rio, couldn't stop talking about Sunday in Ipanema, and instead of answering the same question fifty times — he's taking a group.</p>
     <p class="body-text">Five days in Rio de Janeiro. Twelve people who move — or are building the thing that will. Antonio as your host. The JW Marriott as your base. Sunday on Ipanema as the centerpiece.</p>
     <p class="body-text">This isn't a tour. There's no itinerary you'll follow in a group of thirty. It's twelve people with real access, moving through one of the most alive cities on earth, with someone who's already mapped it.</p>
+  </section>
+</div>
+
+<!-- ═══ HOST ═══ -->
+<div class="wrap">
+  <section style="padding-top:0">
+    <div class="section-label">Your Host</div>
+    <div class="rule"></div>
+    <h2>Antonio Dixon.</h2>
+    <div class="host-card">
+      <div class="host-name">Antonio Dixon</div>
+      <div class="host-credentials">
+        <span class="cred-chip">MIT EMBA</span>
+        <span class="cred-chip">Oxford</span>
+        <span class="cred-chip">Forbes</span>
+        <span class="cred-chip">Hedge Fund</span>
+        <span class="cred-chip">AI / Fintech</span>
+      </div>
+      <p class="host-bio">Antonio is an entrepreneur, investor, and builder at the intersection of AI, finance, and frontier markets. MIT-educated, Oxford-trained, and Forbes-recognized — he has lived and worked across the Gulf, Europe, and the Americas, and knows what it means to build something that matters in a world moving fast.<br><br>
+      He went to Rio. He came back changed. Now he's taking twelve people with him.<br><br>
+      The trip is designed the way Antonio moves: direct access, no tourist packaging, real immersion. You'll see what matters — and you'll see it with the right people.</p>
+    </div>
+  </section>
+</div>
+
+<!-- ═══ ITINERARY ═══ -->
+<div class="wrap">
+  <section style="padding-top:0">
+    <div class="section-label">5 Days</div>
+    <div class="rule"></div>
+    <h2>The week.</h2>
+    <div class="day-list">
+      <div class="day-item">
+        <div>
+          <div class="day-label">Day 1</div>
+          <div class="day-date">Oct 22 · Wed</div>
+        </div>
+        <div class="day-content">
+          <strong>Arrival + Welcome Dinner</strong>
+          <span>JW Marriott check-in. The trip starts at dinner — everyone around the table, Antonio hosting. First night in Rio.</span>
+        </div>
+      </div>
+      <div class="day-item">
+        <div>
+          <div class="day-label">Day 2</div>
+          <div class="day-date">Oct 23 · Thu</div>
+        </div>
+        <div class="day-content">
+          <strong>Christ the Redeemer + The Mountain</strong>
+          <span>Private guided experience. No crowd queues, no tourist group chaos. Sugarloaf. The cable car. The views that explain why people don't leave.</span>
+        </div>
+      </div>
+      <div class="day-item">
+        <div>
+          <div class="day-label">Day 3</div>
+          <div class="day-date">Oct 24 · Fri</div>
+        </div>
+        <div class="day-content">
+          <strong>Free Day + One Night Out</strong>
+          <span>Your day — beach, market, city, whatever you need. Antonio hosts dinner and the evening. Curated. Not a tourist bar crawl.</span>
+        </div>
+      </div>
+      <div class="day-item">
+        <div>
+          <div class="day-label">Day 4</div>
+          <div class="day-date">Oct 25 · Sat</div>
+        </div>
+        <div class="day-content">
+          <strong>Favela + Neighborhood Day</strong>
+          <span>Vidigal or Santa Teresa. The version of Rio that doesn't make the hotel brochure but is the reason the city has a soul. Local guide, real access.</span>
+        </div>
+      </div>
+      <div class="day-item">
+        <div>
+          <div class="day-label">Day 5</div>
+          <div class="day-date">Oct 26 · Sun</div>
+        </div>
+        <div class="day-content">
+          <strong>Sunday in Ipanema ✦</strong>
+          <span>The reason this trip exists. The road closes. Two million people walk into the street. Music, caipirinhas, the ocean. This is the centerpiece — the moment Antonio couldn't stop describing.</span>
+        </div>
+      </div>
+      <div class="day-item">
+        <div>
+          <div class="day-label">Day 6</div>
+          <div class="day-date">Oct 27 · Mon</div>
+        </div>
+        <div class="day-content">
+          <strong>Departure</strong>
+          <span>Group airport transfer. Flights home. You'll already be planning the next one.</span>
+        </div>
+      </div>
+    </div>
   </section>
 </div>
 
@@ -511,21 +828,28 @@
       <div class="inc-item">
         <span class="inc-mark">✦</span>
         <div class="inc-body">
-          <strong>Christ the Redeemer + Sugarloaf Mountain</strong>
-          <span>Private guided experience. No crowd queues, no tourist group chaos.</span>
+          <strong>Christ the Redeemer + Sugarloaf — Private Experience</strong>
+          <span>Guided, no crowd queues, no tourist group chaos.</span>
+        </div>
+      </div>
+      <div class="inc-item">
+        <span class="inc-mark">✦</span>
+        <div class="inc-body">
+          <strong>Neighbourhood Day — Favela Access</strong>
+          <span>Vidigal or Santa Teresa. Local guide. The real texture of the city.</span>
         </div>
       </div>
       <div class="inc-item">
         <span class="inc-mark">✦</span>
         <div class="inc-body">
           <strong>One Night Out — Antonio Hosts</strong>
-          <span>Curated. Not a tourist bar crawl.</span>
+          <span>Curated evening. Not a tourist bar crawl.</span>
         </div>
       </div>
       <div class="inc-item">
         <span class="inc-mark">✦</span>
         <div class="inc-body">
-          <strong>Airport Transfers</strong>
+          <strong>Airport Transfers (Arrival + Departure)</strong>
           <span>Group arrival and departure. No scrambling for cabs.</span>
         </div>
       </div>
@@ -539,7 +863,7 @@
     </div>
 
     <div class="not-included-box">
-      <p><strong>Not included:</strong> Flights (book your own — no flight liability), personal spend, meals outside of inclusions. You own your flights. Everything else, we've got.</p>
+      <p><strong>Not included:</strong> Flights (book your own — no flight liability), personal spend, most meals. You own your flights. Everything else, we've got.</p>
     </div>
   </section>
 </div>
@@ -564,6 +888,13 @@
         <div class="price-amount">$3,900</div>
         <div class="price-note">per person · private king bed</div>
       </div>
+    </div>
+
+    <div class="spots-counter">
+      <div class="spots-bar-wrap">
+        <div class="spots-bar-fill"></div>
+      </div>
+      <span class="spots-text" id="spotsText">10 of 12 spots remaining</span>
     </div>
   </section>
 </div>
@@ -613,29 +944,154 @@
     <p>When it's full, it's full. No waiting list for October.</p>
     <a href="STRIPE_LINK_PLACEHOLDER" class="btn-block">Reserve Your Spot — $750 Deposit</a>
     <p class="secondary-action">
-      Not ready? <a href="#waitlist">Join the waitlist</a> for Cape Town or Bangkok.
+      Questions? DM <a href="https://instagram.com/antoniodixon" target="_blank">@antoniodixon</a> on Instagram.
     </p>
   </div>
+</div>
+
+<!-- ═══ FUTURE TRIPS ═══ -->
+<div class="wrap">
+  <section>
+    <div class="section-label">Mindset Trips</div>
+    <div class="rule"></div>
+    <h2>Rio is just the start.</h2>
+    <p class="body-text" style="margin-bottom:0.5rem">Antonio is building a series. Cities that change how you think. Small groups. Real access. The kind of travel that stays with you.</p>
+
+    <div class="trips-grid">
+      <div class="trip-card">
+        <div class="trip-tag">Booking Open</div>
+        <div class="trip-city">Rio de Janeiro</div>
+        <div class="trip-date">Oct 22–27, 2026</div>
+        <div class="trip-status status-open">Spots Available</div>
+      </div>
+      <div class="trip-card coming-soon">
+        <div class="trip-tag">Coming 2027</div>
+        <div class="trip-city">Cape Town</div>
+        <div class="trip-date">TBD · 2027</div>
+        <div class="trip-status status-soon">Waitlist Open</div>
+      </div>
+      <div class="trip-card coming-soon">
+        <div class="trip-tag">Coming 2027</div>
+        <div class="trip-city">Bangkok</div>
+        <div class="trip-date">TBD · 2027</div>
+        <div class="trip-status status-notify">Notify Me</div>
+      </div>
+      <div class="trip-card coming-soon">
+        <div class="trip-tag">Announced Soon</div>
+        <div class="trip-city">Tokyo</div>
+        <div class="trip-date">TBD · 2027</div>
+        <div class="trip-status status-notify">Notify Me</div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ═══ FAQ ═══ -->
+<div class="wrap">
+  <section style="padding-top:0">
+    <div class="section-label">Questions</div>
+    <div class="rule"></div>
+    <h2>Everything you're wondering.</h2>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q">
+          Who is this trip for?
+          <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-a">People who are building something, running something, or thinking about both. Founders, investors, people in finance, tech, and the spaces between. You don't need a title — you need to be the kind of person who moves.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          What's the actual vibe?
+          <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-a">Intimate and unforced. Twelve people is a dinner party, not a conference. The structure is loose enough that you can disappear for a morning and find your own version of the city. Antonio will be around — not running a tight ship. Think: real people, real conversations, a city that earns your full attention.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          Is this safe? Rio has a reputation.
+          <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-a">Rio has neighborhoods and neighborhoods. The Zona Sul (South Zone) — Ipanema, Leblon, Copacabana — where the JW Marriott sits is very safe, walkable, and absolutely alive. We stay in the right part of the city and we move with awareness, not anxiety. Antonio has done the research. The vibe is Rio for grown-ups.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          What flights should I book?
+          <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-a">Fly into Rio de Janeiro — Galeão International Airport (GIG). Arrive by evening on October 22. Depart anytime October 27. Once you've paid your deposit, message Antonio on Instagram and he'll share the flight timing that works best for the group pickup.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          Do I need to speak Portuguese?
+          <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-a">No. The JW Marriott operates in English, guided experiences are bilingual, and Antonio knows enough Portuguese to navigate. The city will also teach you five words in the first hour.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          I'm coming alone — will I know anyone?
+          <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-a">Most people are. That's the point. Twelve people in a new city is one of the fastest ways to build genuine relationships. By night two, you'll know everyone. By Sunday in Ipanema, you'll have people you'll call in five years.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          Can I do double occupancy with someone I'm not travelling with?
+          <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-a">Yes. If you don't have a room partner, note it in your DM to Antonio. He'll match same-gender room shares for the double rate. No awkwardness — people have done this before.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          What's the refund policy?
+          <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-a">Deposits are non-refundable but transferable. If you can't make it, you can send someone else in your place — same terms, same price. After September 1, full balances are non-refundable and non-transferable. Trip is locked at that point.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          What currency do I need?
+          <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-a">Brazilian Real (BRL). ATMs are available at GIG airport and throughout Ipanema. USD is occasionally accepted but at poor rates. Bring a card with no foreign transaction fees. The JW accepts all major cards.</div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ═══ INSTAGRAM CTA ═══ -->
+<div class="social-band">
+  <p>See what Antonio's building. The trips, the work, the cities.</p>
+  <a href="https://instagram.com/antoniodixon" target="_blank" class="ig-link">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+    @antoniodixon
+  </a>
 </div>
 
 <!-- ═══ WAITLIST ═══ -->
 <div class="waitlist-band" id="waitlist">
   <div class="waitlist-inner">
     <h3>Not ready for Rio?</h3>
-    <p>Cape Town (September 2026) and Bangkok (TBD) are next. Get on the list and Antonio will reach out personally when spots open.</p>
+    <p>Cape Town (2027) and Bangkok (2027) are next. Get on the list and Antonio will reach out personally when spots open.</p>
 
-    <form class="wl-form" id="wlForm">
-      <input type="hidden" name="form-name" value="waitlist">
+    <form class="wl-form" id="wlForm"
+      action="https://formspree.io/f/FORMSPREE_ID_PLACEHOLDER"
+      method="POST">
       <input type="text"   name="name"        placeholder="Your name" required>
       <input type="email"  name="email"        placeholder="Email address" required>
       <input type="text"   name="instagram"    placeholder="Instagram handle (optional)">
       <select name="destination" required>
         <option value="" disabled selected>Destination interest</option>
-        <option value="rio">Rio de Janeiro — October 2026</option>
-        <option value="cape-town">Cape Town — September 2026</option>
-        <option value="bangkok">Bangkok — TBD</option>
-        <option value="all">All of the above</option>
+        <option value="rio">Rio de Janeiro — October 2026 (still available)</option>
+        <option value="cape-town">Cape Town — 2027</option>
+        <option value="bangkok">Bangkok — 2027</option>
+        <option value="tokyo">Tokyo — 2027</option>
+        <option value="all">All future trips</option>
       </select>
+      <input type="hidden" name="_subject" value="New Mindset Trips Waitlist Signup">
+      <input type="hidden" name="_next" value="https://mitdix.github.io/rio-2026">
       <button type="submit" class="wl-submit">Join the Waitlist</button>
     </form>
 
@@ -646,10 +1102,53 @@
 </div>
 
 <footer>
-  Trip operated by SolarFi &nbsp;·&nbsp; Questions? DM <strong>@antoniodixon</strong> on Instagram
+  Mindset Trips &nbsp;·&nbsp; <a href="https://instagram.com/antoniodixon" target="_blank" style="color:inherit;text-decoration:none">@antoniodixon</a>
 </footer>
 
 <script>
+  // ── COUNTDOWN TO JULY 15 2026 ──
+  function updateCountdown() {
+    const deadline = new Date('2026-07-15T23:59:59-04:00');
+    const now = new Date();
+    const diff = deadline - now;
+
+    if (diff <= 0) {
+      document.getElementById('countdown').innerHTML =
+        '<span style="color:var(--red);font-size:.8rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase">Deposit deadline passed</span>';
+      return;
+    }
+
+    const days  = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const mins  = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+
+    document.getElementById('cd-days').textContent  = String(days).padStart(2, '0');
+    document.getElementById('cd-hours').textContent = String(hours).padStart(2, '0');
+    document.getElementById('cd-mins').textContent  = String(mins).padStart(2, '0');
+  }
+
+  updateCountdown();
+  setInterval(updateCountdown, 30000);
+
+  // ── FAQ ACCORDION ──
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.closest('.faq-item');
+      const wasOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+      if (!wasOpen) item.classList.add('open');
+    });
+  });
+
+  // ── SMOOTH SCROLL ──
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+    });
+  });
+
+  // ── FORMSPREE WAITLIST ──
   const form = document.getElementById('wlForm');
   const success = document.getElementById('wlSuccess');
 
@@ -657,31 +1156,29 @@
     form.addEventListener('submit', async function(e) {
       e.preventDefault();
       const btn = form.querySelector('.wl-submit');
+      const orig = btn.textContent;
       btn.textContent = 'Joining...';
       btn.disabled = true;
 
       try {
-        const resp = await fetch('/', {
+        const resp = await fetch(form.action, {
           method: 'POST',
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: new URLSearchParams(new FormData(form)).toString()
+          headers: { 'Accept': 'application/json' },
+          body: new FormData(form)
         });
-        form.style.display = 'none';
-        success.style.display = 'block';
+        if (resp.ok) {
+          form.style.display = 'none';
+          success.style.display = 'block';
+        } else {
+          btn.textContent = 'Try again';
+          btn.disabled = false;
+        }
       } catch (err) {
         form.style.display = 'none';
         success.style.display = 'block';
       }
     });
   }
-
-  // Smooth scroll for all internal anchors
-  document.querySelectorAll('a[href^="#"]').forEach(a => {
-    a.addEventListener('click', e => {
-      const target = document.querySelector(a.getAttribute('href'));
-      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
-    });
-  });
 </script>
 </body>
 </html>
