@@ -586,6 +586,10 @@
     .status-soon   { background: rgba(100,100,100,0.12); color: var(--muted); border: 1px solid rgba(100,100,100,0.3); }
     .status-notify { background: rgba(100,100,100,0.08); color: #5a5a5a; border: 1px solid rgba(100,100,100,0.2); }
 
+    .trip-card.capital { opacity: 1; border-color: rgba(201,169,110,0.4); }
+    .trip-tag.capital { color: var(--gold); }
+    .trip-theme { font-size: 0.72rem; color: var(--dim); line-height: 1.45; margin-top: 0.5rem; }
+
     /* ─── WAITLIST ─── */
     .waitlist-band { background: #0d0d0d; padding: 5rem 1.5rem; }
 
@@ -967,31 +971,49 @@
     <div class="section-label">Mindset Trips</div>
     <div class="rule"></div>
     <h2>Rio is just the start.</h2>
-    <p class="body-text" style="margin-bottom:0.5rem">Antonio is building a series. Cities that change how you think. Small groups. Real access. The kind of travel that stays with you.</p>
+    <p class="body-text" style="margin-bottom:0.5rem">Antonio is building a series. Some trips recharge you — cities that change how you think, small groups, real access. Others are built to make you money: real investment access, real intros, real education, in markets that are actually moving. Both kinds are on this list.</p>
 
     <div class="trips-grid">
       <div class="trip-card">
         <div class="trip-tag">Booking Open</div>
         <div class="trip-city">Rio de Janeiro</div>
         <div class="trip-date">Oct 22–27, 2026</div>
+        <div class="trip-theme">Reconnect &amp; Recharge</div>
         <div class="trip-status status-open">Spots Available</div>
       </div>
       <div class="trip-card coming-soon">
         <div class="trip-tag">Coming 2026</div>
         <div class="trip-city">Cape Town</div>
         <div class="trip-date">Nov 25 – Dec 2, 2026 · Thanksgiving Week</div>
+        <div class="trip-theme">Origins &amp; Adventure</div>
         <div class="trip-status status-soon">Waitlist Open</div>
       </div>
       <div class="trip-card coming-soon">
         <div class="trip-tag">Coming 2026</div>
         <div class="trip-city">Bangkok &amp; Thai Beaches</div>
         <div class="trip-date">Dec 9–16, 2026</div>
+        <div class="trip-theme">Escape &amp; Excess</div>
         <div class="trip-status status-soon">Waitlist Open</div>
+      </div>
+      <div class="trip-card capital">
+        <div class="trip-tag capital">Economic Opportunity</div>
+        <div class="trip-city">Ghana</div>
+        <div class="trip-date">Feb 10–17, 2027</div>
+        <div class="trip-theme">The Gateway: West Africa's Growth Story.<br>$5K–$10K · Investment access, education, real intros — Antonio facilitates.</div>
+        <div class="trip-status status-notify">Notify Me</div>
       </div>
       <div class="trip-card coming-soon">
         <div class="trip-tag">Coming 2027</div>
         <div class="trip-city">Tokyo</div>
         <div class="trip-date">April 7–14, 2027</div>
+        <div class="trip-theme">Precision &amp; Innovation</div>
+        <div class="trip-status status-notify">Notify Me</div>
+      </div>
+      <div class="trip-card capital">
+        <div class="trip-tag capital">Economic Opportunity</div>
+        <div class="trip-city">Saudi Arabia</div>
+        <div class="trip-date">April 14–22, 2027</div>
+        <div class="trip-theme">Vision 2030: Inside the Kingdom's Build-Out.<br>$5K–$10K · Investment access, education, real intros — Antonio facilitates.</div>
         <div class="trip-status status-notify">Notify Me</div>
       </div>
     </div>
@@ -1086,7 +1108,7 @@
 <div class="waitlist-band" id="waitlist">
   <div class="waitlist-inner">
     <h3>Not ready for Rio?</h3>
-    <p>Cape Town (Thanksgiving week, Nov 25 – Dec 2, 2026), Bangkok &amp; Thai Beaches (Dec 9–16, 2026), and Tokyo (April 7–14, 2027) are next. Get on the list and Antonio will reach out personally when spots open.</p>
+    <p>Cape Town (Thanksgiving week, Nov 25 – Dec 2, 2026), Bangkok &amp; Thai Beaches (Dec 9–16, 2026), Ghana (Feb 10–17, 2027), Tokyo (April 7–14, 2027), and Saudi Arabia (April 14–22, 2027) are next. Get on the list and Antonio will reach out personally when spots open.</p>
 
     <form class="wl-form" id="wlForm"
       action="https://formspree.io/f/FORMSPREE_ID_PLACEHOLDER"
@@ -1099,7 +1121,9 @@
         <option value="rio">Rio de Janeiro — October 2026 (still available)</option>
         <option value="cape-town">Cape Town — Nov 25–Dec 2, 2026</option>
         <option value="bangkok">Bangkok &amp; Thai Beaches — Dec 9–16, 2026</option>
+        <option value="ghana">Ghana (Economic Opportunity) — Feb 10–17, 2027</option>
         <option value="tokyo">Tokyo — April 7–14, 2027</option>
+        <option value="saudi">Saudi Arabia (Economic Opportunity) — April 14–22, 2027</option>
         <option value="all">All future trips</option>
       </select>
       <input type="hidden" name="_subject" value="New Mindset Trips Waitlist Signup">
