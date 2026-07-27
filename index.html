@@ -1117,33 +1117,12 @@
 <div class="waitlist-band" id="waitlist">
   <div class="waitlist-inner">
     <h3>Not ready for Rio?</h3>
-    <p>Cape Town (Thanksgiving week, Nov 25 – Dec 2, 2026), Bangkok &amp; Thai Beaches (Dec 9–16, 2026), Ghana (Feb 10–17, 2027), Tokyo (April 7–14, 2027), Saudi Arabia (April 14–22, 2027), and Budapest (May 12–19, 2027) are next. Get on the list and Antonio will reach out personally when spots open.</p>
+    <p>Cape Town (Thanksgiving week, Nov 25 – Dec 2, 2026), Bangkok &amp; Thai Beaches (Dec 9–16, 2026), Ghana (Feb 10–17, 2027), Tokyo (April 7–14, 2027), Saudi Arabia (April 14–22, 2027), and Budapest (May 12–19, 2027) are next.</p>
 
-    <form class="wl-form" id="wlForm"
-      action="https://formspree.io/f/FORMSPREE_ID_PLACEHOLDER"
-      method="POST">
-      <input type="text"   name="name"        placeholder="Your name" required>
-      <input type="email"  name="email"        placeholder="Email address" required>
-      <input type="text"   name="instagram"    placeholder="Instagram handle (optional)">
-      <select name="destination" required>
-        <option value="" disabled selected>Destination interest</option>
-        <option value="rio">Rio de Janeiro — October 2026 (still available)</option>
-        <option value="cape-town">Cape Town — Nov 25–Dec 2, 2026</option>
-        <option value="bangkok">Bangkok &amp; Thai Beaches — Dec 9–16, 2026</option>
-        <option value="ghana">Ghana (Economic Opportunity) — Feb 10–17, 2027</option>
-        <option value="tokyo">Tokyo — April 7–14, 2027</option>
-        <option value="saudi">Saudi Arabia (Economic Opportunity) — April 14–22, 2027</option>
-        <option value="budapest">Budapest (Economic Opportunity) — May 12–19, 2027</option>
-        <option value="all">All future trips</option>
-      </select>
-      <input type="hidden" name="_subject" value="New Mindset Trips Waitlist Signup">
-      <input type="hidden" name="_next" value="https://mitdix.github.io/rio-2026">
-      <button type="submit" class="wl-submit">Join the Waitlist</button>
-    </form>
-
-    <div class="wl-success" id="wlSuccess">
-      ✦ You're on the list.<br>Antonio will be in touch personally when the next trip opens.
-    </div>
+    <a href="https://instagram.com/Gantoniodixon" target="_blank" class="wl-submit" style="display:inline-block;text-decoration:none;text-align:center">DM to Get on the List</a>
+    <p class="secondary-action" style="margin-top:0.75rem">
+      Tell Antonio which trip(s) you're interested in — he replies personally.
+    </p>
   </div>
 </div>
 
@@ -1194,37 +1173,6 @@
     });
   });
 
-  // ── FORMSPREE WAITLIST ──
-  const form = document.getElementById('wlForm');
-  const success = document.getElementById('wlSuccess');
-
-  if (form) {
-    form.addEventListener('submit', async function(e) {
-      e.preventDefault();
-      const btn = form.querySelector('.wl-submit');
-      const orig = btn.textContent;
-      btn.textContent = 'Joining...';
-      btn.disabled = true;
-
-      try {
-        const resp = await fetch(form.action, {
-          method: 'POST',
-          headers: { 'Accept': 'application/json' },
-          body: new FormData(form)
-        });
-        if (resp.ok) {
-          form.style.display = 'none';
-          success.style.display = 'block';
-        } else {
-          btn.textContent = 'Try again';
-          btn.disabled = false;
-        }
-      } catch (err) {
-        form.style.display = 'none';
-        success.style.display = 'block';
-      }
-    });
-  }
 </script>
 </body>
 </html>
